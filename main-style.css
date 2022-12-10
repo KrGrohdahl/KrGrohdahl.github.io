@@ -3414,7 +3414,7 @@ position: relative;
 .main-navigation {
     width: 100vw;
     height: 150px;
-    background: black;
+    background: white;
     display: block;
     position: fixed;
     top: 0;
