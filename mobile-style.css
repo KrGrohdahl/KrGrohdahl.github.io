@@ -1,0 +1,240 @@
+/********************************************************************************************************************************************************
+						MOBILE STYLINGS BELOW
+********************************************************************************************************************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    body {}
+    .banner-index {}
+    #containboard {}
+    
+    /***********************************
+        MOBILE HEADER STYLING
+    ************************************/
+    
+    .idx .banner-index .innerheader {
+        height: 300px!important;
+        background-image: url('https://i.imgur.com/X8j3OsD.jpeg');
+        background-position-y: 0px!important;
+        background-attachment: fixed;
+        background-size: auto;
+    }
+    
+    .idx .banner-index .site-title-i {
+        top: 125px;
+        letter-spacing: 0px;
+        font-size: 16vw;
+    }
+    
+    .idx .banner-index .site-title-i a, .banner-other .site-title-o a { 
+        text-shadow: 5px 5px 1px #2f1c3a!important;
+    }4
+    
+    .idx .banner-index .site-desc-i b {
+        font-size: 12px;
+        letter-spacing: 5px;
+        word-spacing: 3px;
+        padding: 10px 10px 15px 20px;
+    }
+    
+    .idx .banner-index .site-desc-i {
+        top: 120px;
+        background: #161222;
+        padding: 5px 0 9px 0;
+    }
+    
+    .idx .banner-index .site-desc-i::before, .idx .banner-index .site-desc-i::after { display: none; }
+    
+    /***********************************
+        MOBILE NAV BAR STYLING
+    ************************************/
+    
+    .top-navigation-bar {
+        border-bottom: 1px solid var(--mainBorder)!important;
+        background: var(--background)!important;
+    }
+    
+    .headernav {
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background: var(--background);
+        border-bottom: 1px solid var(--mainBorder);
+        font-size: 10px;
+        margin-left: 0;
+    }
+    
+    .nav-seperator {
+        height: 0;
+        margin-bottom: 0px;
+    }
+    
+    .subaccounts {
+        left: -15px;
+        top: -3px;
+    }
+    
+    .subaccounts .forminput {
+        font-size: 15px; }
+    
+    
+    .top-navigation-bar .usernamedec {
+        top: 1px;
+    }
+    
+    
+    }
+    /***********************************************************************************************
+                        MOBILE SIDEBAR STYLING
+    ***********************************************************************************************/
+    
+    /***********************************************************************************************
+                        MOBILE RP BOARDS
+    ***********************************************************************************************/
+    
+    @media only screen and (max-width: 1350px) {
+    
+    .container-5 {
+        display: block;
+        position: relative;
+    }
+    
+    /* Background container CSS for RP Boards */
+    .board-6,
+    .board-7,
+    .board-8,
+    .board-9,
+    .board-10,
+    .board-21 {
+        width: 90vw;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 10px 0;
+    }
+    
+    /* Background images for RP Boards */
+    .board-6 { background: url("https://i.imgur.com/tuyUnRN.png"); }
+    .board-7 { background: url("https://i.imgur.com/vRHMpbk.png"); }
+    .board-8 { background: url("https://i.imgur.com/nDYc8Up.png"); }
+    .board-9 { background: url("https://i.imgur.com/1FaQTY3.png"); }
+    .board-10 { background: url("https://i.imgur.com/Wpj4pS8.png"); }
+    .board-21 { background: url("https://i.imgur.com/VsuY0zp.png"); }
+    
+    .container-5 .forum-symbol {
+        background-image: none!important;
+        background: none;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Hover selector for RP Board bg, moves icon to top of banner */
+    .board-6:hover .forum-symbol,
+    .board-7:hover .forum-symbol,
+    .board-8:hover .forum-symbol,
+    .board-9:hover .forum-symbol,
+    .board-10:hover .forum-symbol,
+    .board-21:hover .forum-symbol {
+        height: 0;
+        width: 0;
+        top: 0;
+        opacity: 1;
+        z-index: 10;
+    }
+    
+    /* Hover effect for background styling */
+    .board-6:hover .forum-background,
+    .board-7:hover .forum-background,
+    .board-8:hover .forum-background,
+    .board-9:hover .forum-background,
+    .board-10:hover .forum-background,
+    .board-21:hover .forum-background {
+        background: none;
+        height: 100px;
+        top: 0;
+        left: 0;
+    }
+    
+    .container-5 .forum-icon {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+    }
+    
+    .container-5 .forum-background {
+        backdrop-filter: none;
+        height: 100px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        transition: all ease 0.4s;
+        opacity: 1;
+    }
+    
+    /* RP Board img size */
+    
+    .container-5 .forum-inner-container > .forum-name {
+        width: 100%;
+        height: 100px;
+        color: white;
+        text-shadow: 0 0 3px black, 0 0 3px black, 0 0 10px black;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 8vw;
+        font-family: "Oban Triangle";
+        font-weight: 400;
+        letter-spacing: -2px;
+        top: 0;
+        z-index: 10;
+        margin: 0;
+    }
+    
+    .container-5 .forum-inner-container {
+        height: 100px;
+        width: 100%;
+        top: 0;
+        position: absolute;
+    }
+    
+    .container-5 .forum-posts {
+        color: rgb(255 255 255 / 15%);
+        position: relative;
+        width: 75px;
+        height: 75px;
+        top: 10px;
+        left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "Abel";
+        font-weight: 900;
+        transform: scaleY(2);
+    }
+    
+    .container-5 .forum-posts b {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        font-weight: 100;
+        transform: scaleY(0.5);
+    }
+    
+    }
+    
+    @media only screen and (max-width: 600px) {
+    
+    .container-5 .forum-inner-container > .forum-name {
+        font-size: 8vw;
+    }
+    
+    }

@@ -1,0 +1,3424 @@
+				/*=============================================== *
+ * Jcink.com Forum Hosting Stylesheet
+ * ==============================================
+ * #Version:	1.0.0
+ *=============================================== */
+
+/*===============================================
+	
+
+	BASE SKIN CODED EXCLUSIVELY BY ESSI.
+
+
+ *=============================================== */
+
+/* removal or moving of any of my credits is against my terms of use for my base skin. 
+if you've found this base skin useful, consider buying me a coffee: https://ko-fi.com/A22014H1
+feel free to delete these messages */
+ 
+HTML, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+form { display:inline; }
+
+.fa, .far, .fas { font-family: "Font Awesome 5 Pro"!important; }
+
+:root {
+    --background: #161222;
+    --mainBorder: #322850;
+
+    --accent: #5655a4;
+    --accent3: rgba(49,83,141,0.25);
+    --backingaccent: #ddd;
+    --backingaccent2: #c6ccd9;
+    --dropdownstext: #c6ccd9;
+    --buttonsinputs: #c6ccd9;
+    --link: #666;
+}
+
+/********
+permissions
+********/
+
+.mcp-0, .acp-0, .m-2 { display: none!important; }
+.g-2 { display: flex !important; }
+.m-4 {display: inline-block!important; }
+
+/* MCP & ACP Visibility Permissions */
+.mcp, .acp {display: none!important; }
+#mcp-4, #acp-4,
+#mcp-11, #acp-11 {display: flex!important;}
+
+@font-face {
+src:url('https://files.jcink.net/uploads/essicodes/2093b1ab-Pe_icon_7_stroke.ttf');
+font-family:stroke;
+}
+
+/******* 	FONTS	*******/
+
+@font-face {
+font-family: LeviRebrushed;
+src: url(https://files.jcink.net/uploads2/narutosaga/LEVIREBRUSHED_TTF.ttf);
+}
+
+@font-face {
+	font-family: "Oban Triangle";
+	src:	url("//dl.dropbox.com/s/p3nnqwawicfkw5q/oban_triangle.woff2") format("woff2"),
+		url("//dl.dropbox.com/s/62d0qc1zbdwkbct/oban_triangle.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* input[type=checkbox] {
+         position: relative;
+	       cursor: pointer;
+    }
+    input[type=checkbox]:before {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 0;
+         left: 0;
+         border: 2px solid #555555;
+         border-radius: 3px;
+         background-color: white;
+}
+    input[type=checkbox]:checked:after {
+         content: "";
+         display: block;
+         width: 5px;
+         height: 10px;
+         border: solid black;
+         border-width: 0 2px 2px 0;
+         -webkit-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
+         transform: rotate(45deg);
+         position: absolute;
+         top: 2px;
+         left: 6px;
+} */
+
+/****************************************
+ Body Background & Text Style
+*****************************************/
+
+body {
+    letter-spacing: 1px;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    font-family: source sans pro;
+    color: #444;
+    text-align: center;
+    background: var(--background);
+	background-image: url('https://i.imgur.com/5rqxgz3.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+#s-m-t-tooltip {
+	max-width: 300px;
+	position: relative;
+	z-index: 999999!important;
+	margin: 15px 14px 7px 12px;
+	padding: 5px 12px;
+	background: white;
+	user-select: none;
+	pointer-events: none;
+}
+
+body::-webkit-scrollbar { width: 3px; }
+body::-webkit-scrollbar-track { background: var(--background); }
+body::-webkit-scrollbar-thumb { background: #fff; }
+body::-webkit-scrollbar-thumb:hover { background: #555; }
+
+
+
+/******
+redirect page box
+******/
+
+#redirect-screen td:first-child {
+
+}
+
+#redirect-screen td a {
+
+}
+
+/********
+header
+********/
+
+#outerheader {
+    margin: 50px;
+    margin: auto;
+}
+
+#outerheader ::-webkit-scrollbar {
+    display: none;
+}
+
+.headertext {
+   font-size: 30px;
+}
+
+.idx .banner-index { display: block; }
+
+.idx .banner-index .innerheader {
+	height: 1000px;
+	position: relative;
+	top: -35px;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	background-image: url('https://i.imgur.com/YPal1bh.jpeg');
+	background-position-x: center;
+	background-attachment: fixed;
+	flex-direction: column;
+	z-index: 1;
+}
+
+.idx .banner-index .site-title-i {
+	position: relative;
+	color: white;
+	font-family: 'LeviRebrushed';
+	width: 100%;
+	text-align: center;
+	font-size: 13vw;
+	z-index: 3;
+	letter-spacing: -5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.idx .banner-index #title-bg {
+	width: 300px;
+	height: 300px;
+	transform: rotate(45deg);
+	position: absolute;
+	z-index: -1;
+	outline: 1px solid white;
+	outline-offset: 25px;
+	overflow: hidden;
+	border: 1px solid white;
+	backdrop-filter: blur(20px);
+}
+
+.idx .banner-index #title-bg:after {
+	content: "";
+	width: 500px;
+	height: 500px;
+	display: block;
+	position: relative;
+	top: -100px;
+	left: -100px;
+}
+
+.idx .banner-index .site-title-i a, .banner-other .site-title-o a {
+	color: white;
+	text-shadow: 15px 0 0 #313d42;
+		-webkit-text-stroke: 1px #313d42;
+	position: relative;
+	top: 25px;
+}
+
+.idx .banner-index .site-desc-i {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+}
+
+.idx .banner-index .site-desc-i b {
+	color: #ffffff;
+	font-size: 35px;
+	text-transform: lowercase;
+	font-family: 'Poiret One';
+	font-weight: 500;
+	text-shadow: -1px -1px 0 #2f1c3a, 1px -1px 0 #2f1c3a, -1px 1px 0 #2f1c3a, 1px 1px 0 #2f1c3a, 2px 2px 1px #2f1c3a;
+	letter-spacing: 10px;
+	word-spacing: 20px;
+}
+
+.idx .banner-other { display: none; }
+
+.idx #site-title-subcontainer {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	top: 600px;
+	z-index: 3;
+}
+
+.idx #site-title-subcontainer #subheader {
+	color: white;
+	font-family: 'Poiret One';
+	font-size: 30px;
+	letter-spacing: 20px;
+}
+
+.banner-other { height: 200px; }
+
+.banner-other .site-title-o {
+	position: relative;
+	color: white;
+	font-family: 'LeviRebrushed';
+	text-shadow: 0px 0px 2px #000000, 0px 0px 5px #000, 0px 0px 15px #000000, 0px 0px 15px #000000;
+	width: 100%;
+	top: 130px;
+	text-align: center;
+	font-size: 100px;
+	z-index: 3;
+	letter-spacing: 10px;
+}
+
+.banner-index { display: none; }
+
+/*****
+header info
+******/
+
+.bottomuserinfo {
+    display: flex;
+    height: 120px;
+    padding: 10px;
+    background: var(--accent3);
+}
+
+.bottomuserinfo .aboutsite {
+    max-widtH: 240px;
+    height: 115px;
+    padding-right: 10px;
+    line-height: 19px;
+}
+
+.bottomuserinfo .aboutsite .locationtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutsitein {
+    overflow: auto;
+    height: 80px;
+    margin-top: 10px;
+text-align: justify;
+}
+
+.aboutsitein li {
+    list-style: none;
+    line-height: 14px;
+    margin-bottom: 8px;
+}
+
+.aboutsitein li b {
+
+}
+
+.aboutsitein li b i {
+
+}
+
+.bottomuserinfo .locimg {
+    margin-left: 10px;
+    padding-right: 10px;
+    height: 115px;
+}
+
+.bottomuserinfo .locimg img {
+    widtH: 85px;
+    height: 115px;
+}
+
+.announcebox {
+    max-width: 270px;
+    text-align: justify;
+    padding: 0 10px;
+    border-right: var(--border);
+    height: 115px;
+    overflow: auto;
+    line-height: 20px;
+}
+
+.announcebox span {
+    font-style: italic;
+}
+
+.announcebox span b {
+
+}
+
+.stafflist {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.stafflist img {
+    width: 45px;
+    height: 105px;
+    margin-left: 3px;
+}
+
+.stafflist a {
+    position: relative;
+}
+
+.headnav {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.headnav a {
+    margiN: 5px 10px;
+    padding: 5px 9px;
+}
+
+/***********
+header navstrip & navigation
+*****************/
+
+.headernav {
+	overflow: hidden;
+	position: absolute;
+	left: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10px;
+}
+
+#navstrip {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 2;
+}
+
+#navstrip a {
+	margin: 0 10px;
+	font-family: 'Abel', sans-serif;
+}
+
+.nav-seperator {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 3px;
+}
+
+
+/*************
+userlinks
+*****************/
+
+.containeruserinfo {
+	bottom: 0;
+	height: 35px;
+	width: 100%;
+	display: flex;
+	flex-directiON: column;
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+}
+
+.bottomborder {
+	border-bottom: 1px solid var(--mainBorder)!important;
+	background: var(--background)!important;
+}
+
+
+.top-navigation-bar {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-directiON: row;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	transition: .3s all ease;
+	border-bottom: 1px solid transparent;
+	color: white;
+	background: #475e60ad;
+	backdrop-filter: blur(10px);
+}
+
+.top-navigation-bar a { 
+	color: white!important;
+	font-family: 'Poiret One';
+}
+
+.top-navigation-bar #box {
+	width: 60px;
+	height: 50px;
+	margin: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.top-navigation-bar #box i { font-size: 20px; }
+
+.box-staff-ACP, .box-staff-MCP {
+	margin: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 0;
+	z-index: 10000;
+}
+
+.box-staff-ACP { bottom: 5px; }
+.box-staff-MCP { bottom: 60px; }
+
+.box-staff-ACP a, .box-staff-MCP a {
+	width: 50px;
+	height: 50px;
+	background: grey;
+	border-radius: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex!important;
+	color: var(--mainBG)!important;
+}
+
+.top-navigation-bar img {
+	width: 20px;
+	margin-right: 10px;
+}
+
+.top-navigation-bar .guest-links {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+}
+
+.top-navigation-bar .usernamedec {
+	top: -8px;
+	position: relative;
+	right: 80px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.top-navigation-bar .usernamedec b { font-weight: 100; color: rgb(255 255 255 / 60%); text-transform: uppercase; }
+
+.top-navigation-bar .usernamedec a {
+	font-size: 11px;
+	font-family: 'Abel', sans-serif;
+	text-transform: uppercase;
+}
+
+.logout-button a, .settings-button a {
+	font-size: 25px!important;
+	position: absolute;
+	top: -12px;
+	padding: 5px;
+	border-radius: 100px;
+	width: 30px;
+	height: 30px;
+}
+
+.logout-button a { right: -10px; }
+.settings-button a { right: 30px; }
+
+.right-user-info {
+	width: calc(100% - 75px);
+	position: fixed;
+	right: 67px;
+	text-align: right;
+	font-family: 'Abel', sans-serif;
+}
+
+#currently-logged-in-account-avatar {
+	position: absolute;
+	top: -13px;
+	right: -65px;
+}
+
+#currently-logged-in-account-avatar img {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	outline: 1px solid rgb(255 255 255 / 50%);
+	outline-offset: 2px;
+}
+
+
+.cboxtog {
+	cursor: pointer;
+	position: absolute;
+	left: 15px;
+	font-size: 31px;
+	z-index: 2;
+}
+
+.cboxtog i {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: -10px;
+}
+
+#scrolltotop, .acp, .mcp {
+	font-family: stroke;
+	font-size: 18px;
+	cursor: pointer;
+	position: fixed;
+	background: transparent;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: 1px solid transparent;
+}
+
+#scrolltotop {
+	bottom: 15px;
+	right: 15px;
+}
+
+.acp {
+	bottom: 15px;
+	right: 55px;
+}
+
+.mcp {
+	bottom: 15px;
+	right: 95px;
+}
+
+.linkinside {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.linkinside a {
+	flex-direction: row;
+	font-size: 10px;
+	letter-spacing: 2px;
+	text-transform: lowercase;
+}
+
+.iconlink {
+	float: left;
+	font-family: stroke;
+	margin-top: 1px;
+	margin-right: 4px;
+}
+
+.subaccounts .forminput {
+	background: none;
+	outline: none;
+	border: none;
+	flex-direction: row;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 0;
+	margin-top: 2px;
+	cursor: pointer;
+	color: white;
+	font-family: 'Abel', sans-serif;
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.subaccounts select option:first-of-type { display: none; }
+
+.subaccounts option {
+	color: white!important;
+	font-size: 12px;
+	background: var(--background);
+}
+
+.subaccounts {
+	height: 20px!important;
+	position: absolute;
+	right: 80px;
+	top: 8px;
+}
+
+.subaccounts a { color: white!important; }
+
+/************
+custom index
+*************/
+
+#outerforum ::-webkit-scrollbar {
+    display: none;
+}
+
+#outerforum {
+    margin: 10px 0;
+    position: relative;
+}
+
+.innerforum {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px 30px;
+    background: var(--accent3);
+}
+
+.title {
+    display: flex;
+    padding: 0 0px;
+    flex-direction: column;
+    align-items: flex-start;
+flex: 2;
+margin-left: 20px;
+    margin-right: 40px;
+}
+
+.title a {
+    font-size: 40px;
+    color:var(--accent3)!Important;
+    display: block;
+    text-transform: uppercase;
+}
+
+.descin {
+    line-height: 23px;
+    font-size: 10px;
+    max-height: 100px;
+    max-width: 300px;
+    overflow: auto;
+    text-align: justify;
+    font-size: 11px;
+    
+}
+
+.innerforum .statsfor {
+    display: flex;
+    align-items: center;
+    flex: 1;
+	justify-content: center;
+}
+
+
+
+.innerforum .statsfor ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    text-transform: lowercase;
+}
+
+.innerforum .statsfor ul li {
+margin-right: 20px;
+}
+
+.postfor {
+    list-style: none;
+    font-weight: 100;
+    display: flex;
+    padding: 10px;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--backingaccent2);
+}
+
+.postfor ul {
+list-style: none;
+display: flex;
+align-items: center;
+}
+
+.postfor li {
+margin-right: 5px;
+}
+
+.postfor a {
+
+}
+
+.insubforums {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    font-size: 0;
+    line-height: 13px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.insubforums a {
+    font-sizE: 11px;
+    margin: 0 8px;
+    text-transform: lowercase;
+    font-weight: 500;
+}
+
+a.subforums-macro {
+display: none;
+}
+
+/* Index Title Card */
+
+.idx .index-card-container {
+	width: 80%;
+	height: 275px;
+	margin: 50px auto 0;
+	background: rgb(22 18 34 / 25%);
+	border: 1px solid #312946;
+	outline: 1px solid #312946;
+	outline-offset: 10px;
+	backdrop-filter: blur(5px);
+}
+
+.idx .index-card-title {
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Poiret One';
+	color: white;
+	border-bottom: 1px solid #312946;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	word-spacing: 5px;
+}
+
+.idx .index-card-left {
+	width: 35%;
+	height: 200px;
+	border-right: 1px solid #312946;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.idx .index-card-left div {
+	width: 75%;
+	color: white;
+	text-align: justify;
+	font-family: 'Abel';
+	color: #b4a7d7;
+	font-size: 12px;
+}
+
+.idx .index-card-left b {color: white; font-weight: 100;}
+
+/* .idx .index-card-left:before {
+	content: "";
+	background-image: url('https://i.imgur.com/o2QzKXL.gif');
+	opacity: 0.2;
+	height: 100%;
+	display: block;
+} */
+
+
+/***************************
+custom topic view
+****************************/
+
+.outerforumtopic {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    background: var(--accent3);
+}
+
+.innerforum2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 25px;
+}
+
+.outerforumtopic .topictitle {
+    display: block;
+    positioN: relative;
+    z-index: 2;
+}
+
+.outerforumtopic .topictitle a {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.topicdesc1 {
+    margin-right: 12px;
+    line-height: 10px;
+    margin-top: -5px;
+    padding-top: 0;
+    margin-left: 3px;
+    height: 10px;
+    font-style: normal;
+    align-content: flex-end;
+}
+
+.topicaboutinf {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.outerforumtopic .abouttopic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    positioN: relative;
+    z-index: 2;
+}
+
+.outerforumtopic .abouttopic .topicdesc {
+    margin-bottoM: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.topicabout {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.topicabout .topicdesc {
+    margin-right: 25px;
+    display: inline-flex;
+}
+
+.topicdesc .topicic {
+    font-family: stroke;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    line-height: 16px;
+    text-aligN: center;
+    letter-spacing: 0;
+    margin-right: 13px;
+}
+
+.topicdesc a {
+    margin: 0 7px;
+    font-weight: 700;
+    padding-bottom: 2px;
+}
+
+.announcetitle {
+    padding: 6px 10px;
+    margin: 15px 0;
+}
+
+.mcheck {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    height: 18px;
+    margin: auto;
+    opacity: 0;
+    transitioN: 0.3s;
+}
+.outerforumtopic:hover .mcheck {
+    opacity: 1;
+}
+
+/***************
+custom stats
+****************/
+
+#recent-topics {
+    display: none;
+}
+
+#outerstats {
+    positioN: relative;
+    margin: auto;
+    background: var(--backingaccent2);
+}
+
+.innerstats {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitletext {
+    background: var(--accent3);
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.subtitletext li {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.subtitletext li b {
+    font-weight: 100;
+}
+
+.topinstats {
+    display: flex;
+}
+
+.activelist {
+    padding: 20px;
+    max-height: 200px;
+    flex: 2;
+}
+
+.todayactivelist {
+    flex: 1;
+    padding: 20px;
+    max-height: 200px;
+}
+
+.recenttopics {
+    positioN: relative;
+    background: var(--backingaccent3);
+}
+
+#recents {
+    max-height: 260px;
+    overflow: auto;
+    counter-reset: topics;
+}
+
+#recents .holdrec {
+    text-align: left;
+    padding: 8px 15px;
+    position: relative;
+}
+
+#recents .holdrec a {
+
+}
+
+#recents .holdrec a strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.bottomstatlinks {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding: 10px 0;
+    background: var(--accent3);
+}
+
+.bottomstatlinks a {
+
+}
+
+.bottomstatlinks li {
+    list-style: none;
+}
+
+/****************************
+custom post view
+*****************************/
+
+#outerpost {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.topic-title-space {
+    display: none;
+}
+
+.topic-title {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.topic-desc {
+    display: block;
+    margin-left: 2px;
+}
+
+.toppostarea {
+    background: var(--backingaccent2);
+    align-items: flex-start;
+    display: flex;
+    align-items: stretch;
+}
+
+.lefttopim {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    positioN: relative;
+}
+
+.postareasmallim {
+
+}
+
+.postareasmallim img {
+    width: 50px;
+    height: 50px;
+}
+
+.posttopname {
+    display: flex;
+    padding: 30px 35px;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1;
+}
+
+.posttopname h1 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.posttopname h1 a {
+}
+
+.posttopname h2 {
+    display: flex;
+    margin-top: 0;
+    list-style: none;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.posttopname h2 li {
+    margin-right: 23px;
+}
+
+
+.posttopname h2 {
+    align-items: center;
+}
+
+.posttopname h2 li b {
+    margin-right: 3px;
+}
+
+.bottompostarea {
+    display: flex;
+    background: var(--accent3);
+}
+
+.avatarpostarea {
+    display: flex;
+    positioN: relative;
+}
+
+.inpostarea img {
+    width: 200px;
+    height: 400px;
+}
+
+.postlinksav {
+    background: var(--backingaccent2);
+    display: flex;
+    height: 14px;
+    padding: 10px 20px;
+    justify-content: space-evenly;
+}
+
+.postlinksav a {
+
+}
+
+.leftpostarea {
+    flex: 1;
+    position: relative;
+}
+
+.postaboutarea {
+    top: 55px;
+    padding: 5px 0;
+    z-index: 10;
+    display: flex;
+    flex: 1;
+    background: var(--backingaccent3);
+    justify-content: space-between;
+}
+
+.postaboutarea li {
+    list-style: none;
+}
+
+.postaboutarea .button-small {
+        min-width: 50px;
+        max-width: 80px;
+    padding: 5px 15px;
+    line-height: 10px;
+    list-style: none;
+    positioN: relative;
+    top: -1px;
+    font-weight: 100;
+    margiN: 0 10px;
+    min-width: 0;
+    color: var(--link);
+    display: inline-flex;
+}
+
+.postaboutarea li i {
+    padding: 5px 15px;
+    line-height: 10px;
+    list-style: none;
+    positioN: relative;
+    top: -1px;
+    font-weight: 100;
+    margiN: 0 10px;
+    background-size: cover;
+    display: inline-flex;
+    font-style: normal;
+}
+
+.postaboutarea li i a {
+    margin-left: 3px;
+}
+
+.postareain {
+    padding: 30px;
+}
+
+/****************************
+custom profile view
+*****************************/
+
+#outerprofile {
+    margiN: 40px auto;
+    border-bottom: var(--border);
+}
+
+.innerprofile {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.topprofile {
+    display: flex;
+    align-items: center;
+}
+
+.innertopprofile {
+    height: 140px;
+    display: flex;
+    align-items: center; 
+    flex: 1;
+    background: var(--backingaccent2);
+}
+
+.innertopprofile img {
+    background: var(--accent3);
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    margin-left: 50px;
+}
+
+.proname {
+    font-size: 25px;
+    margin-left: 45px;
+}
+
+.bottompro {
+    padding: 20px 0;
+    text-transform: lowercase;
+    background: var(--accent3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottompro a {
+}
+
+.middlepro {
+    display: flex;
+    margin: 0px 0;
+}
+
+.baseinfo {
+    background: var(--backingaccent2);
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.baseinfo ul {
+    margiN: 0;
+    padding: 15px 15px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.baseinfo ul li {
+    display: flex;
+    flex-direction: column;
+line-height: 14px;
+}
+
+.baseinfo b {
+    margin-bottom: 4px;
+}
+
+.baseinfo i {
+font-style: normal;
+}
+
+.proavin {
+    background: var(--backingaccent2); 
+    padding: 20px;
+}
+
+.proavin img {
+width: 200px;
+height: 400px;
+    background: var(--accent3);
+    padding: 9px;
+}
+
+.aliasbot {
+    background: var(--accent3);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+
+/****************************************
+   Table Styles
+*****************************************/
+
+table, tr, td {
+
+}
+
+/****************************************
+   Board Width
+*****************************************/
+
+
+#containboard {
+	max-width: 1320px;
+	margin: auto;
+	position: relative;
+	min-width: 700px;
+	top: -35px;
+}
+
+#wrapper { 
+	text-align:left;
+        padding-bottom: 5px;
+}
+
+#innerwrapper { 
+	padding: 20px;
+	padding-top: 0;
+	min-width: 1300px;
+}
+
+/****
+sidebar
+****/
+
+#sidebar {
+    position: fixed;
+    width: 100%;
+    background: var(--backingaccent);
+    top: 0;
+    bottom: 0;
+	opacity: 0;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.BTOGGLE {
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+	z-index: 9999;
+}
+
+.TOGGLE {
+    opacity: 1!important;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+	z-index: 9999;
+}
+
+.TOGGLE1 {
+    opacity: 1!important;
+    -webkit-transition: 0s!important;
+    -o-transition: 0s!important;
+    transition: 0s!important;
+	z-index: 9999;
+}
+
+.BTOGGLE1 {
+    -webkit-transition: 0s!important;
+    -o-transition: 0s!important;
+    transition: 0s!important;
+	z-index: 9999;
+}
+
+/****************************************
+   Link colors
+*****************************************/
+
+a:link, a:visited, a:active { 
+	text-decoration: none;	
+	color: var(--link); 
+}
+
+
+/****************************************
+   Profile styles 
+*****************************************/
+
+#profilename { 
+	font-size:28px;
+	font-weight:bold; 
+}
+
+#photowrap { 
+	padding:6px; 
+}
+
+#phototitle { 
+	font-size:24px; 
+	border-bottom:1px solid black;
+}
+
+#photoimg   { 
+	text-align:center; margin-top:15px; 
+} 
+
+/****************************************
+   UserCP/My Controls styles
+*****************************************/
+
+#ucpmenu { 
+	line-height:150%;
+	width:22%; 
+}
+
+#ucpmenu a {
+    text-transform: uppercase;
+    font-size: 9px;
+}
+
+#ucpmenu p  { 
+	padding:2px 5px 6px 9px; 
+	margin:0px;  
+}
+
+#ucpcontent { 
+	line-height:150%; width:auto; 
+}
+
+#ucpcontent p  { 
+	padding:10px;
+	margin:0px; 
+}
+
+/****************************************
+  Logo Strip
+*****************************************/
+
+#logostrip { 
+	display: none;
+}
+
+#logo { 
+	min-height: 60px; 
+	text-align: left; 
+	margin-top: 5px; 
+	padding: 20px 20px 5px; 
+}
+
+
+#logo a, #logo a:hover { 
+	font-size: 36px; 
+	text-decoration: none;
+	font-weight: bold; 
+	color: #800000; 
+}
+
+/****************************************
+  Search Bar 
+*****************************************/
+
+#searchbar {
+	display: block;	
+	float: right;
+	position: relative;
+	right: 10px;
+	top: 8px;
+}
+
+#searchbar .search-container {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4) inset;
+    border: 1px solid #D8D8D8;
+    display: block;
+    height: 26px;
+    position: relative;
+    width: 200px;
+}
+
+#searchbar .search-input {
+	background: none repeat scroll 0 0 transparent;
+	border: 0;
+	color: #808080;
+	font-size: 12px;
+	width: 192px;
+	height: 26px;
+	font-family: Arial, sans-serif;
+	padding: 1px 0 0 8px;
+}
+
+#searchbar .search-input:focus {
+    color: #000000;
+}
+
+#searchbar .search-button {
+	background: #800000 url(https://files.jcink.net/themes/default/magnifying-glass.png) no-repeat 50% 50%;
+	border: 0;
+	bottom: 0;
+	margin: 0;
+	border-radius: 0;
+	display: block;
+	height: 26px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	text-indent: -3000em;
+	top: 0;
+	width: 26px;
+	cursor: pointer;
+	box-shadow: none;
+}
+
+/****************************************
+  Navigation Bar / Submenu
+*****************************************/
+
+#submenu  {display: none;
+	font-size: 13px;
+	border: solid #555;
+        border-width: 1px 0;
+	background-color: #800000;
+        background-image: url(https://files.jcink.net/themes/default/red-gradient-glass.png);
+        background-position: center center;
+        margin-bottom: 3px;
+}
+
+#submenu img { 
+	display: none; 
+}
+
+#submenu a:link, #submenu a:visited, #submenu a:active { 
+	text-decoration: none;
+	color: #fff !important; 
+        padding: 7px 7px;
+        font-weight: bold;
+}
+
+#submenu a:hover { 
+	color: #fff !important; 
+	text-decoration: underline; 
+}
+
+#navi br { 
+	display: none; 
+}
+
+
+
+
+/****************************************
+   Calendar styling
+*****************************************/
+
+.caldate   { 
+	text-align:right;
+	font-weight:bold;
+	font-size:11px;
+	color:#555;
+	background-color:#F2F2F2;
+	padding:4px; margin:0px; 
+}
+
+#calendarname { 
+	font-size:22px;
+	font-weight:bold; 
+}
+
+#padandcenter { 
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:14px 0px 14px 0px; 
+}
+
+
+/**************************************************
+ User Links Menu (Messages / View new posts / etc )
+***************************************************/
+
+#userlinks { display: none;
+	border: 1px solid #545454; 
+	background-color: #F2F2F2; 
+	list-style: none; 
+	width: 960px; 
+	margin: 0 auto; 
+	background-image:url(https://files.jcink.net/themes/default/white-gradient.png); 
+}
+
+#userlinks td { 
+	color: #333; 
+}
+
+#userlinks a { 
+	text-decoration: underline; padding: 1px; 
+}
+
+#userlinks a:hover { 
+	text-decoration: none; 
+}
+
+
+/****************************************
+   Topic View styles
+*****************************************/
+
+.activeuserstrip { 
+    font-size: 10px;
+    padding: 0 10px;
+    text-align: center;
+font-weight: 700;
+}
+
+.activeuserstrip a {
+}
+
+
+.unreg { 
+	font-size: 11px; 
+	font-weight: bold; 
+	color: #900; 
+}
+
+.post1 { 
+
+}
+
+.post2 { 
+
+}
+
+.postdetails { 
+	font-size: 10px; 
+}
+
+.postcolor   { 
+	font-size: 12px; line-height: 160%; 
+}
+
+.postlinksbar {
+	
+}
+
+.postlinksbar a {
+
+}
+
+.signature   { 
+display: none;
+ 
+}
+
+
+/*******************************
+ Pagination e.g. [1],2,3 ...
+*******************************/
+
+.pagination .pagination_current, .pagination a {
+     padding: 2px 5px;
+background: var(--backingaccent3);
+}
+
+.pagination a:link, .pagination a:visited, .pagination a:active {
+
+}
+
+.pagination a:hover {
+}
+
+.pagination .pagination_current {
+background: var(--accent3);
+ 
+}
+
+.pagination_first, .pagination_last, .pagination_page {
+
+}
+
+.pagination_pagetxt {
+    display:none;
+}
+
+/****************************************
+   Global general table/div row styles
+*****************************************/
+
+.row1,.row3,.row4,.row2 { 
+	padding: 5px;
+	text-align: center;
+}
+
+#boardstats .row2 { 
+	text-align: center; 
+}
+
+.row2 {
+    padding: 5px 10px;
+    text-align: center;
+font-weight: 500;
+}
+
+.darkrow1 { 
+	
+}
+
+.darkrow2 { 
+    padding: 0 10px;
+    text-align: center;
+}
+
+td.darkrow2 { 
+	display: none; 
+}
+
+.darkrow3 { 
+	color: #000; 
+	padding: 3px; 
+}
+
+.hlight { background-color: #111; }
+.dlight { background-color: #111; }
+
+
+
+/****************************************
+  Bar directly below the maintitles 
+*****************************************/
+
+.maintitle {
+	font-size: 25px;
+	text-align: center;
+	border-radius: 100px;
+	padding: 25px;
+	margin: 25px auto;
+	margin-top: 50px;
+	font-family: 'Poiret One';
+	letter-spacing: 25px;
+	color: white;
+	text-transform: uppercase;
+	user-select: none;
+}
+
+.maintitle a { color: white!important; }
+
+/****************************************
+  Table & Div Borders 
+*****************************************/
+
+.tableborder { 
+ padding:0px; margin:0; 
+}
+
+.tablefill { 
+
+	padding:6px; 
+}
+
+.tablepad {
+	
+	padding:6px;
+}
+
+.tablebasic {
+	width:100%; padding:0; margin:0px; border:0px; 
+}
+
+.plainborder { 
+	
+}
+
+/****************************************
+  QUOTE and CODE BBCode boxes
+*****************************************/
+
+#QUOTE { 
+	white-space:normal; 
+	font-family: open sans, sans-serif; 
+	font-size: 11px; 
+	color: #333; 
+	background-color: #EFEFEF; 
+	border: 0px; 
+	padding:2px;
+	border:1px solid #555; 
+	margin-top:2px; 
+}
+
+#CODE  { 
+	white-space:normal; 
+	font-family: Courier, Courier New, Verdana, Arial;  
+	font-size: 11px; 
+	color: #333; 
+	background-color: #EFEFEF; 
+	border: 0px; 
+	padding:2px;
+	border:1px solid #555; 
+	margin-top:2px; 
+}
+
+
+/**********************************************
+  Input buttons, e.g. submit, text input, etc
+***********************************************/
+
+.button-large {
+	background: none; 
+        padding: 7px 14px;
+	text-align:center;
+	margin:5px 5px 0px 5px;
+        background: var(--accent3);
+	font-weight: 700;
+        min-width: 75px;
+	font-size: 15px;
+        display: inline-block;
+   }
+
+
+.post-buttons-top { margin-top: 3px; }
+
+.button-large.closed {
+color:#999!important;
+}
+
+.forminput, .codebuttons, .textinput, .radiobutton, .checkbox {
+	border-radius: 0px;
+	border: none;
+	padding: 4px 8px;
+	vertical-align: middle;
+	outline: none;
+	background: var(--dropdownstext);
+}
+
+input[type=submit], input[type=button], input[type=reset] {
+	background: none;
+	box-shadow: none;
+	margin: 3px;
+	padding: 3px 6px;
+	text-decoration: none;
+    font-weight: 700;
+	border: none; 
+	outline: none;
+background: var(--buttonsinputs);
+}
+
+.codebuttons  { 
+	font-size: 10px; 
+}
+
+#post-icon-options {
+display: none;
+}
+
+
+/****************************************
+  Form table cell styles, left/right/top
+*****************************************/
+
+.pformstrip {
+	
+	
+	padding: 2px 5px;
+	margin-top:1px 
+}
+
+.pformleft  { 
+
+	padding:6px; 
+	margin-top:1px;width:25%; 
+	
+}
+
+.pformleftw { 
+padding:6px; 
+	margin-top:1px;width:40%; 
+	
+}
+
+.pformright { 
+
+	padding:6px; margin-top:1px;
+	
+}
+
+
+/****************************************
+ Tabs on the portal profiles + sections
+*****************************************/
+
+.opentab {
+	color: #FFF;
+	padding:8px;float: left; width: auto;
+	background-color: #800000;
+        background-image: url(https://files.jcink.net/themes/default/red-gradient.png);
+	margin-top:3px;
+	margin-right:2px;
+	font-size:11px;
+	border: #545454 1px solid;	
+}
+
+.closedtab {
+	color: #FFF;
+	padding:7px;float: left;width: auto;
+	background-color: #800000;
+        background-image: url(https://files.jcink.net/themes/default/red-gradient.png);
+	margin-top:6px;
+	margin-right:2px;
+	font-size:11px;
+	border-top:   #545454 1px solid;
+	border-right: #545454 1px solid;
+	border-left:  #545454 1px solid;
+}
+
+.positiontab { 
+	height: 34px; margin-left: 2px;
+}
+
+/****************************************
+   Delete all cookies / mark read
+*****************************************/
+
+#delcookiesrow, #mark-as-read-subto {
+	padding: 5px;
+    text-transforM: uppercase;
+        margin-top:-3px;
+        padding-left:1px;
+}
+
+#delcookiesrow a, #mark-as-read-subto a {
+}
+
+#mark-as-read-subto {
+	padding: 5px;
+        padding-left:1px;
+}
+
+#skin_selector {
+
+}
+
+
+/*******************************
+     Board Statistics Links
+*******************************/
+
+.toplinks a {
+	color: #ffffff;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.toplinks {
+	margin: 0 11px -37px 0;
+	text-align: right;
+	color: transparent;
+}
+
+/*******************************
+ Mini Profile Seperators
+*******************************/
+
+.postbit { 
+	border-bottom: solid 1px #C0C0C0; 
+	color: black;
+	background: #EFEFEF;
+	font-size: 11px;
+        padding: 6px 7px;
+}
+
+/********************************
+	Miscellaneous
+********************************/
+
+/* image tag styles */
+img        { vertical-align:middle; border:0px }
+img.attach { border:2px outset #555;padding:2px }
+
+/* Forum Descriptions */
+.desc { font-size:11px; color: #000; }
+
+/* Edited by text */
+.edit { font-size: 9px }
+
+/* Topic Macros */
+
+.wrapmini { display: none;
+float: left; }
+
+/* Warning CSS */
+.warngood { color:green }
+.warnbad  { color:red }
+
+/* Skin selector dropdown */
+#skin_selector { 
+	margin: 10px 0; 
+}
+
+
+/* Online users list row */
+.thin { 
+	padding:6px 0px 6px 0px;
+	line-height:140%;
+	margin:2px 0px 2px 0px;
+	border-top:1px solid #545454;
+	border-bottom:1px solid #545454;
+}
+
+/* Latest news area */
+.newstext { 
+	display: none;
+	background-color: #EFEFEF; 
+	border: 1px solid #555; 
+	padding: 6px 6px 2px 6px; 
+	margin-bottom: 10px; 
+}
+
+/* Highlighted text in search */
+.searchlite { 
+	color:#F00;
+	font-weight:bold;  
+	background-color:#FF0; 
+}
+
+/****************************************
+ Mobile-specific Styles
+*****************************************/
+
+#mobile { 
+	background-color: #FBFBFB;
+}
+
+/***********************************
+ Copyright: Removal is against Terms
+************************************/
+
+	.copyright { 
+        position: relative;
+        top: 14px;
+	line-height: 12px; 
+    	text-transform: uppercase;
+    	letter-spacing: 2px;
+}
+	
+	/* Hides default JCink profile fields */
+#field-website,
+#field-gtalk,
+#field-aim,
+#field-yim,
+#field-msn,
+#field-skype,
+#field-location,
+#field-interests {display: none;}
+
+
+
+/***********************************
+	CUSTOM POP-OUT PROFILES
+************************************/
+
+#profile {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: #000000cc;
+	z-index: -1;
+	opacity: 0;
+	transition: .4s;
+	backdrop-filter: blur(5px);
+}
+
+.exit-pro {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -3;
+}
+
+#profile.popout .exit-pro {
+   z-index: 2;
+}
+
+#profile.popout {
+   opacity: 1;
+   z-index: 100000;
+}
+
+#profile .profile-in {
+    padding: 20px 0px 0px;
+    margin: 0px;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    width: 1200px;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    transition: all 0.8s ease 0s;
+    background: #161222;
+    outline: 1px solid #4e4d50;
+}
+
+#profile-content {
+      padding: 0 30px;
+}
+
+#profile.popout .profile-in {
+   right: 0;
+}
+
+.close-pro {
+  color: #eee;
+  font-size: 50px;
+  position: absolute;
+  margin: 10px 22px;
+  cursor: pointer;
+  top: 0;
+  left: -12px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  border: 1px solid #201933;
+  font-family: monospace;
+  transition: all ease .2s;
+  background: #201933;
+}
+
+.close-pro:hover { background: #322850; border: 1px solid #322850; }
+
+.profile-container {
+  width: 1020px;
+  height: 575px;
+  position: relative;
+  margin: auto;
+}
+
+.profile-container .avatar {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding-right: 25px;
+  border-right: 1px solid #4e4d50;
+}
+
+.profile-container .avatar img {
+  width: 200px;
+  height: 400px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.profile-container .essentials {
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  left: 220px;
+  top: 50px;
+  border-right: 1px solid #4e4d50;
+}
+
+.profile-container .essentials .elements img, .profile-container .essentials .specializations img { width: 31px; height: 31px; }
+
+.profile-container .essentials .elements, .profile-container .essentials .specializations { position: relative; left: 2px; }
+
+.profile-container .essentials .elements { margin-bottom: 10px; }
+
+.profile-container .essentials .entry {
+  position: relative;
+  margin-top: 20px;
+  color: white;
+  text-align: right;
+}
+
+.profile-container .essentials .entry b {
+  position: relative;
+  right: 25px;
+  text-align: left;
+  width: 100px;
+  font-family: 'Lato';
+  font-size: 21px;
+  font-weight: 100;
+  color: #817794;
+
+}
+
+.profile-container .essentials .entry span {
+  display: block;
+  position: relative;
+  left: 25px;
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 100;
+  text-align: left;
+}
+
+.profile-container .data {
+  width: 450px;
+  height: 400px;
+  position: absolute;
+  top: 50px;
+  left: 445px;
+  padding-right: 25px;
+  border-right: 1px solid #4e4d50;
+}
+
+.profile-container .name {
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Lato';
+  font-size: 35px;
+  font-weight: 100;
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-container .data .bg {
+  font-size: 15px;
+  color: white;
+  background: #201933;
+  height: 400px;
+  position: relative;
+  border-radius: 0;
+}
+
+.profile-container .links {
+  position: absolute;
+  right: 30px;
+  top: 75px;
+  display: flex;
+  flex-direction: column;
+  font-size: 35px;
+}
+
+.profile-container .links a { 
+  color: white!important;
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #4e4d50;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease .2s;
+  transform: rotate(45deg);
+}
+
+.profile-container .links a:nth-of-type(even) { position: relative; left: 25px; }
+.profile-container .links .fa, .profile-container .links .fas { transform: rotate(-45deg); }
+.profile-container .links a:hover { background: #322850; border: 1px solid #322850; }
+
+.profile-container .line { width: 100%; height: 1px; background: #4e4d50; position: absolute; bottom: 103px; }
+
+.profile-container .ooc {
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Inter';
+}
+
+.profile-container .ooc .icname {
+  position: relative;
+  color: white;
+  padding: 10px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container .ooc .icname b {
+  font-size: 22px;
+  font-size: 30px;
+  font-family: 'Lato';
+  font-weight: 100;
+  text-transform: uppercase;
+  color: white;
+}
+
+.profile-container .ooc .oocname {
+  position: relative;
+  color: white;
+  padding: 10px;
+  padding-right: 20px;
+  border-left: 1px solid #4e4d50;
+}
+
+.profile-container .ooc .oocname span {
+  font-size: 17px;
+  color: #4e4d50;
+  display: block;
+  text-align: left;
+}
+
+.profile-container .ooc .oocname b { font-size: 22px; }
+
+.profile-container .ooc .item {
+  position: relative;
+  color: white;
+  padding: 10px;
+  border-left: 1px solid #4e4d50;
+  padding-right: 20px;
+}
+
+.profile-container .ooc .item span {
+  font-size: 13px;
+  color: #4e4d50;
+  display: block;
+  text-align: left;
+}
+
+.profile-container .ooc .item b { font-size: 16px; font-weight: 100; color: white; }
+
+
+#profile .profile-details-container {
+    width: 1200px;
+    padding: 20px 0px 0px;
+    margin: 0px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    bottom: -230px;
+}
+
+.profile-details {
+  width: 375px;
+  height: 200px;
+  background: #161222;
+  outline: 1px solid #4e4d50;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.profile-details .pd-header {
+  width: 100%;
+  height: 40px;
+  background: #201933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: 'Lato';
+}
+
+.profile-details .pd-body {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-details .pd-body s {
+  color: white;
+  font-size: 250px;
+  opacity: .05;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0; 
+  text-decoration: none;
+}
+
+.profile-details .pd-text {
+    padding: 10px 25px;
+    height: 140px;
+    width: 325px;
+    font-family: 'Lato';
+    font-size: 15px;
+    overflow-y: scroll;
+    position: relative;
+    line-height: 200%;
+}
+
+@media only screen and (max-height: 850px) {
+#profile .profile-in {
+    padding: 20px 0px 0px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    width: 1100px;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    transition: all 0.8s ease 0s;
+    background: #161222;
+    outline: 1px solid #4e4d50;
+}
+
+#profile .profile-details-container {
+    width: 1200px;
+    padding: 20px 0px 0px;
+    margin: 0px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 30%;
+    top: -40px;
+}
+
+.profile-details {
+    width: 250px;
+    height: 200px;
+    background: #161222;
+    outline: 1px solid #4e4d50;
+    display: block;
+    margin: 10px 0;
+}
+
+.profile-details .pd-header {
+  width: 100%;
+  height: 40px;
+  background: #201933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
+  font-family: 'Lato';
+}
+
+.profile-details .pd-body {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-details .pd-body s {
+  color: white;
+  font-size: 250px;
+  opacity: .05;
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0; 
+  text-decoration: none;
+}
+
+.profile-details .pd-text {
+    padding: 10px 25px;
+    height: 140px;
+    width: 200px;
+    font-family: 'Lato';
+    font-size: 15px;
+    overflow-y: scroll;
+    position: fixed;
+    line-height: 200%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************
+
+					POPUP MODAL
+
+********************************************************************************************************************/ 
+
+.modalbutton {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background: none;
+	box-sizing: border-box;
+	color: white;
+	font-size: 35px;
+	position: fixed;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all ease .15s;
+	left: 15px;
+}
+
+#overwrite {
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background: none;
+	box-sizing: border-box;
+	color: white;
+	font-size: 35px;
+	position: fixed;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all ease .15s;
+	left: 15px;
+	top: 5px;
+}
+
+
+.modalback {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	background: rgba(0,0,0,0);
+	transition: all .3s 0s, z-index 0s .3s;
+}
+
+.modalbacking {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	z-index: -1;
+	transition: all ease .3s;
+
+	background-image: url(https://cdn.discordapp.com/attachments/352685049730301964/883878161035694110/download.jpg);
+	background-size: cover;
+	background-position: center;
+	filter: blur(10px) brightness(0.5);
+	background-attachment: fixed;
+}
+
+.fadein { z-index: 10000; transition: all .3s 0s, z-index 0s 0s; }
+
+.fadein .modalbacking {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	z-index: 10000;
+}
+
+.permborder {
+	border-bottom: 1px solid transparent!important;
+	background: var(--background)!important;
+}
+
+.leftborder, .rightborder, .botborder {
+	position: fixed;
+	background: var(--background);
+	z-index: 99999;
+}
+
+.leftborder {
+	height: 100%;
+	left: 0;
+	top: 51px;
+	width: 20px;
+}
+
+.rightborder {
+	height: 100%;
+	right: 0;
+	top: 51px;
+	width: 20px;
+}
+
+.botborder {
+	height: 20px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.modal {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 50vw;
+	height: 75vh;
+	z-index: 10001;
+	transition: all .3s 0s;
+}
+
+.fadein .modal { opacity: 1; }
+
+.modalclose {
+	color: white;
+	position: absolute;
+	right: 25px;
+	top: 60px;
+	font-size: 30px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background: var(--background);
+	border: 1px solid var(--mainBorder);
+	transition: ease .1s;
+	opacity: 0;
+	z-index: 99999;
+}
+
+.modalvisible { opacity: 1!important; }
+
+.modal-contents {
+	position: fixed;
+	width: 75vw;
+	height: 88vh;
+	top: 75px;
+}
+
+
+.modal h2, .modal h3 {
+	color: white;
+	font-weight: 10;
+	font-size: 45px;
+	font-family: 'Work sans', sans-serif;
+	user-select: none;
+}
+
+.modal-container .modalboxleft {
+	display: flex;
+}
+
+.modal-container .modalboxleft h2 {
+	writing-mode: vertical-lr;
+	margin: 0;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+
+.modal .modal-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+
+.infobox-contents h1 {
+	font-size: 22px;
+	margin: 5px 0 10px 0;
+	padding: 0;
+	color: white;
+	font-weight: 200;
+	font-family: 'Work Sans';
+	user-select: none;
+}
+
+
+
+.infobox-container {
+  padding: .5em 1em;
+  font-family: 'Abhaya Libre';
+  font-size: 14px;
+  white-space: pre-line;
+  color: transparent;
+}
+
+.infobox-container a { color: #8e8c94; }
+
+.infobox-header {
+  width: 100%;
+  margin: auto;
+  text-align: right;
+  font-weight: bold;
+  font-family: 'Abhaya Libre';
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 25px;
+  border-bottom: 2px solid #6f5a80;
+  padding-bottom: 4px;
+  user-select: none;
+  color: #856e98;
+}
+
+.infobox-head {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Abhaya Libre';
+  text-transform: uppercase;
+  font-size: 21px;
+  line-height: 11px;
+  border-bottom: 2px solid #6f5a80;
+  padding-bottom: 4px;
+  user-select: none;
+  color: #6f5a80;
+}
+
+.infobox-contents {
+  text-align: left;
+  color: #6f5a80;
+}
+
+.infobox-contents a {
+  text-decoration: none;
+  transition: all ease 0.3s;
+}
+
+.infobox-contents a:hover {
+  color: white!important;
+}
+
+.infobox-body {
+    width: 560px;
+    background-color: #322850;
+    margin-left: 321px;
+    margin-top: 66px;
+    margin-bottom: 50px;
+    padding: 50px;
+    outline-offset: 15px;
+    outline: 1px solid #322850;
+    text-align: justify;
+    font-family: 'inter';
+    font-size: 12px;
+    white-space: pre-line;
+    color: #d4ccde;
+    line-height: 24px;
+}
+
+.infobox-body b { color: #8f6ea9; }
+.infobox-body a { color: #d2a28b;   transition: all ease .2s; }
+.infobox-body a:hover { color: white; }
+
+
+/********************************************************************************************************************************************************
+						DEFAULT FORUM STYLE
+********************************************************************************************************************************************************/
+
+.indsection {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon {
+	display: block;
+	position: relative;
+	margin: 10px 0;
+}
+
+.background {
+	width: 1000px;
+	height: 150px;
+	background: #201933;
+	position: relative;
+}
+
+.symbol {
+	width: 155px;
+	height: 150px;
+	background: #161222;
+	position: absolute;
+	z-index: 1;
+	border-radius: 0 100% 100% 0;
+	left: -5px;
+}
+
+.user-icon {
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	z-index: 2;
+	border: 10px solid #322850;
+	border-radius: 100%;
+}
+
+.user-icon img {
+	width: 75px;
+	height: 75px;
+	background-size: cover;
+	transition: 1s all ease;
+	border-radius: 100%;
+}
+
+.name {
+	position: absolute;
+	left: 175px;
+	display: flex;
+	height: 100%;
+	width: calc(100% - 175px);
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 40px;
+	font-family: 'Poiret One';
+	text-transform: capitalize;
+}
+
+
+
+/********************************************************************************************************************************************************
+						ANNOUNCEMENT BOARD STYLING
+********************************************************************************************************************************************************/
+
+/* (REMOVE) */
+.board-4 {
+	position: absolute;
+	top: -367px;
+	left: 500px;
+}
+
+.board-4 .name {
+	height: auto;
+	width: auto;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-family: 'Poiret One';
+	text-transform: uppercase;
+	background: #201933;
+	padding: 5px 100px;
+	outline: 1px solid #312946;
+	outline-offset: 2px;
+	backdrop-filter: blur(5px);
+	left: unset;
+}
+
+.board-4 .background {
+	width: 650px;
+	height: 175px;
+	position: relative;
+	background: none;
+}
+
+.board-4 .inner-container { 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.board-4 .thread-name {
+position: relative;
+    top: 60px;
+    width: auto;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'abel';
+}
+
+.board-4 .symbol {display: none;}
+.board-4 .posts {display: none;}
+.board-4 .threads {display: none;}
+.board-4 .user-icon {display: none;}
+.board-4 .poster-name {display: none;}
+.board-4 .thread-date {display: none;}
+.board-4 .description {display: none;}
+
+
+
+/********************************************************************************************************************************************************
+						CREATION BOARD STYLINGS
+********************************************************************************************************************************************************/
+
+	/* Category container + ID */
+.container-6, #cat-6 {
+	display: inline;
+	position: relative;
+}
+
+#container-6 {
+	height: 750px;
+	color: rgb(255 255 255 / 35%);
+}
+
+.container-6 a:link,
+.container-6 a:visited,
+.container-6 a:active { color: rgb(255 255 255 / 60%); }
+
+.container-6 .name a:link,
+.container-6 .name a:visited,
+.container-6 .name a:active { color: white; }
+
+.container-6 .background {
+	width: 200px;
+	height: 200px;
+	background: #201933;
+	position: relative;
+	border-radius: 100%;
+}
+
+	/* Container for Creation Hub board bodies */
+.board-11,
+.board-12,
+.board-13,
+.board-14,
+.board-20,
+.board-42 {
+	position: absolute;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+	/* Positioning for individual Creation Hub boards */
+/* Characters */
+.board-11 {
+	left: 335px;
+}
+
+/* Clans */
+.board-12 {
+	left: 750px;
+}
+
+/* Jutsu */
+.board-13 {
+	top: 225px;
+	left: 210px;
+}
+
+/* Items */
+.board-14 {
+	top: 450px;
+	left: 335px;
+}
+
+/* Missions */
+.board-20 {
+	top: 225px;
+	left: 875px;
+}
+
+/* Lore */
+.board-42 {
+	top: 450px;
+	left: 750px;
+}
+
+	/* Styling for rounded backdrop behind icons */
+.container-6 .symbol {
+	background: #201933;
+	z-index: 0;
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	top: 25%;
+}
+
+.container-6 .board-11 .symbol,
+.container-6 .board-13 .symbol,
+.container-6 .board-14 .symbol {
+	left: unset!important;
+	right: 100px;
+	border-radius: 100px 0 0 100px;
+}
+
+.container-6 .board-12 .symbol,
+.container-6 .board-20 .symbol,
+.container-6 .board-42 .symbol {
+	left: 100px;
+	border-radius: 0 100px 100px 0;
+}
+
+
+.container-6 .user-icon,
+.container-6 .posts,
+.container-6 .threads { display: none; }
+
+	/* Styling for large Creation Hub icons */
+.container-6 .description {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+	/* Styling for board name */
+
+.container-6 .name {
+	position: absolute;
+	top: 60px;
+	font-size: 25px;
+	text-align: center;
+	width: 200px;
+	letter-spacing: 3px;
+	display: block;
+	left: unset;
+}
+
+.container-6 .board-11 .name, .container-6 .board-13 .name, .container-6 .board-14 .name { right: 185px; }
+.container-6 .board-12 .name, .container-6 .board-20 .name, .container-6 .board-42 .name { left: 185px; }
+
+.container-6 .thread-name {
+	position: absolute;
+	right: 185px;
+	width: 200px;
+	top: 93px;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.container-6 .board-11 .thread-name, .container-6 .board-13 .thread-name, .container-6 .board-14 .thread-name { right: 185px; }
+.container-6 .board-12 .thread-name, .container-6 .board-20 .thread-name, .container-6 .board-42 .thread-name { left: 185px; }
+
+.container-6 .poster-name {
+	position: absolute;
+	right: 185px;
+	width: 200px;
+	top: 108px;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.container-6 .board-11 .poster-name, .container-6 .board-13 .poster-name, .container-6 .board-14 .poster-name { right: 185px; }
+.container-6 .board-12 .poster-name, .container-6 .board-20 .poster-name, .container-6 .board-42 .poster-name { left: 185px; }
+
+.container-6 .thread-date {
+	position: absolute;
+	right: 185px;
+	width: 200px;
+	top: 123px;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.container-6 .board-11 .thread-date, .container-6 .board-13 .thread-date, .container-6 .board-14 .thread-date { right: 185px; }
+.container-6 .board-12 .thread-date, .container-6 .board-20 .thread-date, .container-6 .board-42 .thread-date { left: 185px; }
+
+
+
+/********************************************************************************************************************************************************
+						RP BOARD STYLINGS
+********************************************************************************************************************************************************/
+
+.container-5, #cat-5 {
+	display: inline;
+	position: relative;
+}
+
+.container-5 { left: 10px; }
+
+.container-5 a:link,
+.container-5 a:visited,
+.container-5 a:active { color: #fff; }
+
+/* Background container CSS for RP Boards */
+.board-6,
+.board-7,
+.board-8,
+.board-9,
+.board-10,
+.board-21 {
+	width: 200px;
+	height: 600px;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+/* Background images for RP Boards */
+.board-6 { background: url("https://i.imgur.com/SDz8eIj.png"); }
+.board-7 { background: url("https://i.imgur.com/SxnoA42.png"); }
+.board-8 { background: url("https://i.imgur.com/WdLVl1s.png"); }
+.board-9 { background: url("https://i.imgur.com/Yup7bCf.png"); }
+.board-10 { background: url("https://i.imgur.com/IjZCLey.png"); }
+.board-21 { background: url("https://i.imgur.com/muDFlp2.png"); }
+
+/* RP Board village icon size + position */
+.container-5 .icon {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	top: 225px;
+	left: 25px;
+	border-radius: 100%;
+}
+
+/* RP Board Icon transition container */
+.container-5 .symbol {
+	width: 150px;
+	height: 150px;
+	background-color: #161222c9;
+	border-radius: 100%;
+	z-index: 5;
+	position: absolute;
+	transition: all ease 0.3s;
+	top: 0;
+}
+
+/* RP Board img size */
+.container-5 .icon .symbol img {
+	width: 150px;
+	height: 150px;
+}
+
+/* Sets the village symbol for each board */
+.board-6 > .icon > .symbol { background-image: url("https://i.imgur.com/REnuUB8.png"); }
+.board-7 > .icon > .symbol { background-image: url("https://i.imgur.com/8Dc3o02.png"); }
+.board-8 > .icon > .symbol { background-image: url("https://i.imgur.com/OQQ4PML.png"); }
+.board-9 > .icon > .symbol { background-image: url("https://i.imgur.com/Kc13cAk.png"); }
+.board-10 > .icon > .symbol { background-image: url("https://i.imgur.com/hvHu4Dg.png"); }
+.board-21 > .icon > .symbol { background-image: url("https://i.imgur.com/s0IwuZU.png"); }
+
+/* Hover selector for RP Board bg, moves icon to top of banner */
+.board-6:hover .symbol,
+.board-7:hover .symbol,
+.board-8:hover .symbol,
+.board-9:hover .symbol,
+.board-10:hover .symbol,
+.board-21:hover .symbol {
+	top: -240px;
+	opacity: 1;
+	z-index: 10;
+	background-color: transparent;
+}
+
+/* RP Board background styling */
+.container-5 .background {
+	height: 0;
+	width: 200px;
+	top: 75px;
+	left: -25px;
+	position: absolute;
+	transition: all ease 0.3s;
+	backdrop-filter: blur(3px) contrast(1.5) grayscale(50%);
+	opacity: 0;
+}
+
+/* Hover effect for background styling */
+.board-6:hover .background,
+.board-7:hover .background,
+.board-8:hover .background,
+.board-9:hover .background,
+.board-10:hover .background,
+.board-21:hover .background {
+	background: #161222c9;
+	height: 600px;
+	top: -235px;
+	left: -25px;
+	position: relative;
+	transition: all ease 0.3s;
+	transition-delay: 50ms;
+	opacity: 1;
+}
+
+/* Inner container positioning + size for RP Board hover effect */
+.container-5 .inner-container {
+	position: absolute;
+	width: 200px;
+	height: 500px;
+	top: 0;
+}
+/* Styling for RP Board name */
+.container-5 .name {
+	width: 190px;
+	height: 100px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	margin: 5px 5px;
+	top: 130px;
+	left: unset;
+	text-transform: uppercase;
+	font-size: 34px;
+	letter-spacing: 0px;
+	font-weight: 200;
+}
+
+/* Styling for RP Board post + thread counts */
+.container-5 .posts,
+.container-5 .threads,
+.container-5 .thread-name {
+	width: 150px;
+	height: 30px;
+	color: rgb(255 255 255 / 15%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: 20px 25px;
+	top: 125px;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-family: "Abel";
+	font-weight: 900;
+	user-select: none;
+}
+
+.container-5 .posts b,
+.container-5 .threads b,
+.container-5 .thread-name b {
+	position: absolute;
+	color: white;
+	font-size: 25px;
+	font-family: "Lato";
+	font-weight: 200;
+}
+
+.container-5 .user-icon {
+	position: absolute;
+	top: 355px;
+	left: 25px;
+	border: none;
+}
+
+.container-5 .user-icon img {
+	width: 125px;
+	height: 125px;
+	background-size: cover;
+	transition: 1s all ease;
+	border-radius: 100%;
+	border: 10px solid var(--background);
+}
+
+.container-5 .user-icon img:hover {
+	background-size: 200px;
+}
+
+/* Styling for RP board thread name container */
+.container-5 .thread-name {
+	color: white;
+	position: relative;
+	text-align: center;
+	margin: 5px 0;
+	padding: 10px 3px;
+	width: 200px;
+	height: 30px;
+	top: 270px;
+	font-size: 11px;
+	font-family: "inter";
+	font-weight: 200;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* Styling for RP Board last poster name */
+.container-5 .poster-name {
+	width: 200px;
+	color: rgb(255 255 255 / 50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: auto;
+	top: 260px;
+	font-size: 11px;
+	font-family: "inter";
+	font-weight: 200;
+}
+
+.container-5 .poster-name b { margin: 0 5px; font-weight: 400; }
+
+
+/* Styling for RP Board last post's date */
+.container-5 .thread-date {
+	width: 150px;
+	color: rgb(255 255 255 / 50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: 5px 25px;
+	top: 260px;
+	font-size: 11px;
+	font-family: "inter";
+	font-weight: 200;
+}
+
+
+
+
+
+
+
+/***********************************************************************************************************************
+
+				(REMOVE) TEMPORARY CSS, DELETE ON RELEASE
+
+***********************************************************************************************************************/
+
+.board-5 { display: none; }
+
+#field_34 input, #field_35 input, #field_36 input, #field_37 input {
+	width: 150px;
+	padding: 0;
+}	
+
+#field_34 input {
+
+
+	width: 200px; /* Full-width */
+	height: 10px; /* Specified height */
+
+	outline: none; /* Remove outline */
+	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	padding: 0;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+#field_34 input:hover { opacity: 1; }
+
+#field_34 input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 10px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	border-radius: 10px;
+	background: gold; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+#field_34 input::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: gold; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-navigation {
+    width: 100vw;
+    height: 150px;
+    background: white;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+	overflow: hidden;
+}
