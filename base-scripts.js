@@ -319,3 +319,10 @@ function modal(n) {
     $(".main-navigation").removeClass("modal-colour-swap");
   });
 }
+
+if (!document.body.classList.contains("idx")) {
+  r.style.setProperty("--headerBgTop", "#201933");
+  r.style.setProperty("--headerBgBottom", "#161222");
+  r.style.setProperty("--headerBorder", "#322850");
+  r.style.setProperty("--headerFont", "white");
+}
