@@ -219,34 +219,6 @@ $(document).ready(function () {
   });
 })(jQuery);
 
-// on-scroll event listener that adds "bottomborder" class to "top-navigation-bar" when scrolled past the "divider" div
-
-window.addEventListener("scroll", function () {
-  var elementTarget = document.getElementById("divider");
-  if (
-    window.scrollY >
-    elementTarget.offsetTop + elementTarget.offsetHeight - 100
-  ) {
-    $(".top-navigation-bar").addClass("bottomborder");
-  } else {
-    $(".top-navigation-bar").removeClass("bottomborder");
-  }
-});
-
-// on-scroll event listener that adds "side-bar-slide" class to "side-bar-container" when scrolled past the "divider" div
-
-window.addEventListener("scroll", function () {
-  var elementTarget = document.getElementById("divider");
-  if (
-    window.scrollY >
-    elementTarget.offsetTop + elementTarget.offsetHeight - 500
-  ) {
-    $(".side-bar-container i").addClass("side-bar-slide");
-  } else {
-    $(".side-bar-container i").removeClass("side-bar-slide");
-  }
-});
-
 // board statistics HTML page with recent topics clip by ESSI
 
 var topic = "/index.php?act=idx";
