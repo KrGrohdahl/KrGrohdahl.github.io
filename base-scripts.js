@@ -224,7 +224,7 @@ $(document).ready(function () {
 var topic = "/index.php?act=idx";
 $.get(topic, function (data) {
   $(".inner-stats", data).each(function () {
-    str = $(this).html();
+    let str = $(this).html();
   });
   $("#recent-topics", data).each(function () {
     topics = $(this).html();
@@ -271,3 +271,51 @@ $(document).on("keyup", function () {
     $(".main-navigation").removeClass("modal-colour-swap");
   }
 });
+
+/* swaps header css variables based on "checkpoint" element offset */
+
+let r = document.querySelector(":root");
+
+function topHeader() {
+  r.style.setProperty("--headerBgTop", "#201933");
+  r.style.setProperty("--headerBgBottom", "#161222");
+  r.style.setProperty("--headerBorder", "#322850");
+  r.style.setProperty("--headerFont", "white");
+}
+
+function bottomHeader() {
+  r.style.setProperty("--headerBgTop", "rgb(243 243 243)");
+  r.style.setProperty("--headerBgBottom", "rgb(232 233 219)");
+  r.style.setProperty("--headerBorder", "#948da9");
+  r.style.setProperty("--headerFont", "black");
+}
+
+window.addEventListener("scroll", function () {
+  let scrollCheckpoint = document.getElementById("checkpoint");
+  if (
+    window.scrollY >
+    scrollCheckpoint.offsetTop + scrollCheckpoint.offsetHeight
+  ) {
+    topHeader();
+  } else {
+    bottomHeader();
+  }
+});
+
+/*	toggles guide modal/hamburger menu + swaps nav menu colour palette	*/
+function modal(n) {
+  $("#modalback" + n).toggleClass("fadein");
+  $(".modalclose").toggleClass("modalvisible");
+  $(".main-navigation").toggleClass("modal-colour-swap");
+
+  $(".modalclose").click(function () {
+    $("#modalback" + n).removeClass("fadein");
+    $(".modalclose").removeClass("modalvisible");
+    $(".main-navigation").removeClass("modal-colour-swap");
+  });
+  $(".modalbacking").click(function () {
+    $("#modalback" + n).removeClass("fadein");
+    $(".modalclose").removeClass("modalvisible");
+    $(".main-navigation").removeClass("modal-colour-swap");
+  });
+}
