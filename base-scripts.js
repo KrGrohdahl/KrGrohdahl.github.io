@@ -319,3 +319,5 @@ function modal(n) {
     $(".main-navigation").removeClass("modal-colour-swap");
   });
 }
+
+test;
