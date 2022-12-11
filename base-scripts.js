@@ -273,6 +273,7 @@ $(document).ready(function () {
     ) {
       var href = $(this).attr("href");
       $("#profile").addClass("popout");
+      $(".main-navigation").addClass("modal-colour-swap");
       $.get(href, function (data) {
         $("#outerprofile", data).each(function () {
           profile = $(this).html();
@@ -286,6 +287,7 @@ $(document).ready(function () {
   $(".close-pro, .exit-pro").on("click", function () {
     if ($("#profile").hasClass("popout")) {
       $("#profile").removeClass("popout");
+      $(".main-navigation").removeClass("modal-colour-swap");
       $("#profile-content").html("loading...");
     }
   });
@@ -294,5 +296,6 @@ $(document).ready(function () {
 $(document).on("keyup", function () {
   if (event.keyCode === 27 && $("#profile").hasClass("popout")) {
     $("#profile").removeClass("popout");
+    $(".main-navigation").removeClass("modal-colour-swap");
   }
 });
