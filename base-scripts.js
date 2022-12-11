@@ -277,9 +277,9 @@ $(document).on("keyup", function () {
 let r = document.querySelector(":root");
 
 function topHeader() {
-  r.style.setProperty("--headerBgTop", "#201933");
-  r.style.setProperty("--headerBgBottom", "#161222");
-  r.style.setProperty("--headerBorder", "#322850");
+  r.style.setProperty("--headerBgTop", "#1d1c2b");
+  r.style.setProperty("--headerBgBottom", "#111213");
+  r.style.setProperty("--headerBorder", "#232527");
   r.style.setProperty("--headerFont", "white");
 }
 
@@ -321,8 +321,8 @@ function modal(n) {
 }
 
 if (!document.body.classList.contains("idx")) {
-  r.style.setProperty("--headerBgTop", "#201933");
-  r.style.setProperty("--headerBgBottom", "#161222");
-  r.style.setProperty("--headerBorder", "#322850");
+  r.style.setProperty("--headerBgTop", "#1d1c2b");
+  r.style.setProperty("--headerBgBottom", "#111213");
+  r.style.setProperty("--headerBorder", "#232527");
   r.style.setProperty("--headerFont", "white");
 }
