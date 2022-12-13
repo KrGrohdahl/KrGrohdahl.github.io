@@ -1,10 +1,14 @@
 :root {
     --background: #111213;
+    --darkerBg: #141216;
     --mainBorder: #555265;
-    --accent: #232527;
+    --accent: #ffb300;
+    --accent2: #5789d7;
     --mainBorder: #232527;
 
     --link: #666;
+
+    --fastTransition: all ease 300ms;
 }
 
 body {
@@ -101,18 +105,21 @@ body {
 
     transform: translateX(-50%);
     left: 50%;
-
-    bottom: 10px;
+    bottom: 0;
     z-index: 2;
 
-    cursor: pointer;
+    backdrop-filter: contrast(1.1) brightness(1.75) saturate(2) blur(4px) hue-rotate(80deg);
+    border-top: 25px solid var(--background);
+    box-sizing: border-box;
+    padding: 10px;
+    background: none;
 }
 
 
 
 #guides > .forum-name {
     position: absolute;
-    left: 100px;
+    left: 25px;
     top: 50%;
     transform: translateY(-50%);
     font: bold 120px 'DM Serif Display';
@@ -123,11 +130,17 @@ body {
     font-style: italic;
     text-shadow: 5px 5px 0 #473653;
     z-index: 2;
+
+
+    height: 100%;
+    padding: 0 75px;
+    display: flex;
+    align-items: center;
 }
 
 #guides > .forum-icon {
     font-size: 300px;
-    color: #ffb300;
+    color: var(--accent);
     width: 300px;
     height: 300px;
     display: flex;
@@ -135,37 +148,44 @@ body {
     justify-content: center;
     position: relative;
     bottom: -50px;
-    left: -50px;
+    left: -75px;
     transform: rotate(45deg);
     z-index: 1;
     opacity: .4;
-    border: 3px dashed #ffb300;
+    border: 3px dashed var(--accent);
     border-radius: 100%;
-    outline: 1px dashed #ffb300;
+    outline: 1px dashed var(--accent);
     outline-offset: 10px;
 }
 
 #guides > .subforums {
-    width: 450px;
+    width: 400px;
     height: 50%;
 
     position: absolute;
 
     text-align: right;
-    right: 0;
+    right: 25px;
     top: 25%;
     transform: translateY(-25%);
 }
 
 #guides > .subforums a {
-
     display: inline-block;
     background: var(--background);
     text-transform: uppercase;
-    font-family: 'Noto Sans';
+    font-family: 'Kanit';
     font-size: 14px;
-    padding: 5px 30px;
-    margin: 3px 15px;
+    padding: 3px 10px;
+    margin: 3px 5px;
     text-decoration: none;
     color: white;
+    transition: all ease 300ms;
+    z-index: 3;
+    letter-spacing: -.5px
+}
+
+#guides > .subforums a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 1px white;
 }
