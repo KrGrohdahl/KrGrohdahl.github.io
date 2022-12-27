@@ -1,0 +1,341 @@
+:root {
+	/* Global Colours */
+	--background: #111213;
+	--backgroundSemiTransparent: #111213bd;
+	--backgroundVeryTransparent: #1112137d;
+	--mainBorder: #555265;
+	--accent: rgb(35,37,39);
+	--accent2: #5789d7;
+	--accent3: #ffb300;
+    --accentRGB: rgb(20, 21, 22);
+	--mainBorder: #232527;
+	--headerBgTop: #1d1c2b;
+	--headerBgBottom: #111213;
+	--headerFont: white;
+	--headerBorder: #232527;
+	--buttonHover: #948da9;
+
+    /* Font Colours */
+	--whiteFont: #fff;
+	--offWhiteFont: #b9b9b9;
+    --link: #666;
+	--linkWhiteOverride: white!important;
+
+	/* Transitions */	
+	--fastTransition: all ease 250ms;
+	--moderateTransition: all ease 350ms;
+
+	/* Images */
+	--defaultHero: url('https://i.imgur.com/YPal1bh.jpeg');
+	--winterHero: url('https://i.imgur.com/IUIm3tq.jpeg');
+	--mainBackgroundImage: url('https://i.imgur.com/kb8KAmb.png');
+
+	--konohaBg: url('https://i.imgur.com/SDz8eIj.png');
+	--konohaIcon: url('https://i.imgur.com/REnuUB8.png');
+	--kumoBg: url('https://i.imgur.com/SxnoA42.png');
+	--kumoIcon: url('https://i.imgur.com/8Dc3o02.png');
+	--sunaBg: url('https://i.imgur.com/WdLVl1s.png');
+	--sunaIcon: url('https://i.imgur.com/OQQ4PML.png');
+	--iwaBg: url('https://i.imgur.com/Yup7bCf.png');
+	--iwaIcon: url('https://i.imgur.com/Kc13cAk.png');
+	--kiriBg: url('https://i.imgur.com/IjZCLey.png');
+	--kiriIcon: url('https://i.imgur.com/hvHu4Dg.png');
+	--minorCountriesBg: url('https://i.imgur.com/muDFlp2.png');
+	--minorCountriesIcon: url('https://i.imgur.com/s0IwuZU.png');
+	--waveBg: url('https://i.imgur.com/xo6suv2.png');
+
+	/* Role Colours */
+	--Admin: red;
+	--Banned: red;
+	--Guests: red;
+	--Members: red;
+
+	--Konoha: 156,10,10;
+	--Kumo: 120,133,142;
+	--Suna: #00c37c;
+	--Iwa: #b28c76;
+	--Kiri: 49,109,160;
+	--Ronin: #5e8e12;
+	--Nukenin: #621c8a;
+	--Tailed-Beasts: pink;
+}
+
+body {
+    background-image: url("assets/background.png");
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+.ST #containboard:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    background-image: url("assets/wave-bg.png");
+    background-attachment: fixed;
+    position: absolute;
+    z-index: 1;
+    opacity: .5;
+}
+
+.ST #containboard {
+    max-width: 1400px;
+    margin: auto;
+    top: 0;
+    min-width: 700px;
+    border: 1px solid var(--mainBorder);
+    height: 100%;
+    position: relative;
+}
+
+/* Post Row Containers */
+#post-row-container {
+    width: 1225px;
+    height: auto;
+    margin: 25px auto;
+    position: relative;
+    z-index: 2;
+
+    background-image: url("assets/background.png");
+    background-attachment: fixed;
+}
+
+#post-row {
+    display: grid;
+    grid-template-columns: 275px 950px;
+    grid-template-rows: 175px 40px minmax(525px, max-content);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+
+    border: 1px solid var(--mainBorder);
+    box-sizing: border-box;
+    backdrop-filter: brightness(90%);
+
+    background: #0c0d0fcf;
+}
+
+/* Small Top-left Avatar Section */
+#pr-small-avatar {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#pr-small-avatar img {
+    width: 125px;
+    height: 125px;
+    background-image: url("assets/avatar-placeholder.png");
+    background-position: center;
+    border: 15px solid rgba(var(--Konoha),0.5);
+    background-clip: content-box;
+    outline: 30px solid var(--accentRGB);
+    border-radius: 100%;
+    background-size: contain;
+}
+
+/* Username Section */
+#pr-header {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    text-transform: uppercase;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-left: 1px solid var(--mainBorder);
+}
+
+#pr-username {
+    font-size: 70px;
+    line-height: 100%;
+    font-family: 'DM Serif Display';
+    color: rgba(var(--Konoha),1);
+    letter-spacing: 5px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 95%;
+    text-align: center;
+}
+
+#pr-title {
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Abel';
+    color: var(--offWhiteFont);
+    letter-spacing: 10px;
+    opacity: .5;
+}
+
+#pulldown-svg {
+    color: var(--offWhiteFont);
+    background: var(--accentRGB);
+    width: 25px;
+    height: 150px;
+    padding: 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0 10px 10px 0;
+    font-size: 25px;
+
+    cursor: pointer;
+
+    position: absolute;
+    left: -10px;
+
+    transition: var(--fastTransition);
+}
+
+#pulldown-svg:hover {
+    color: white;
+    background: var(--accent);
+    left: 0;
+}
+
+/* Post Links Section */
+#post-links {
+    border-top: 1px solid var(--mainBorder);
+    width: 1223px;
+    grid-area: 2 / 1 / 3 / 3;
+    background: rgb(25, 25, 29);
+    display: flex;
+    position: relative;
+
+    color: white;
+    font-family: 'inter';
+}
+
+#post-links:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("assets/topograph.jpg");
+    background-color: var(--accent);
+    mix-blend-mode: color-dodge;
+    position: absolute;
+}
+
+#post-link {
+    position: relative;
+    z-index: 1;
+
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accentRGB);
+    border-bottom: 1px solid var(--mainBorder);
+    border-right: 1px solid var(--mainBorder);
+
+    box-sizing: border-box;
+
+    font-family: 'DM Serif Display'
+}
+
+#post-link-date {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    left: 25px;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+/* Large Avatar / Miniprofile Section */
+#pr-avatar {
+    grid-area: 3 / 1 / 4 / 2;;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    border-top: 1px solid var(--mainBorder);
+    /* background: #121213; */
+}
+
+/* #pr-avatar:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-image: url("assets/topograph2.jpg");
+    background-color: var(--accent);
+    mix-blend-mode: overlay;
+    position: absolute;
+    opacity: .4;
+} */
+
+#sticky {
+    align-self: start;
+    position: sticky;
+    top: 0;
+}
+
+#miniprofile {
+    width: 275px;
+    height: 475px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(15, 15, 19);
+}
+
+#miniprofile:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("assets/topograph2.jpg");
+    background-attachment: fixed;
+    mix-blend-mode: color-dodge;
+    position: absolute;
+    border: 1px solid var(--mainBorder);
+}
+
+#miniprofile img {
+    width: 200px;
+    height: 400px;
+    background: grey;
+    position: relative;
+    z-index: 1;
+}
+
+
+#div4 {
+    grid-area: 3 / 2 / 4 / 3;
+    border-top: 1px solid var(--mainBorder);
+    border-left: 1px solid var(--mainBorder);
+
+    padding: 50px;
+
+    color: var(--offWhiteFont);
+} 
