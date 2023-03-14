@@ -222,20 +222,6 @@ $(document).ready(function () {
   });
 })(jQuery);
 
-// board statistics HTML page with recent topics clip by ESSI
-
-var topic = "/index.php?act=idx";
-$.get(topic, function (data) {
-  $(".inner-stats", data).each(function () {
-    let str = $(this).html();
-  });
-  $("#recent-topics", data).each(function () {
-    topics = $(this).html();
-  });
-  $("#stats").append(str);
-  $("#recents").append(topics);
-});
-
 /** popout profile script by ESSI
 http://sourced.jcink.net
 **/
