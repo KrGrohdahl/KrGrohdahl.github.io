@@ -37,10 +37,13 @@ $(document).ready(function () {
   });
 });
 
-$("#recents").html(function () {
+//*************** recent topics code by essi ******************//
+var topic = "/index.php?act=idx";
+$.get(topic, function (data) {
+  var topics = $(".recent-topics-info", data).html();
   var str = "";
-  $(".recent-topics-info").each(function () {
-    str = str + "<div class='holdrec'>" + $(this).html() + "</div>";
+  $(".recent-topics-info, .recent-topics-date", data).each(function () {
+    str = str + "<div class='holdrec'>" + $(this).html() + "</div><p>";
   });
   $("#recents").append(str);
 });
