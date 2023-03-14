@@ -37,16 +37,16 @@ $(document).ready(function () {
   });
 });
 
-//*************** recent topics code by essi ******************//
-var topic = "/index.php?act=idx";
-$.get(topic, function (data) {
-  var topics = $(".recent-topics-info", data).html();
-  var str = "";
-  $(".recent-topics-info, .recent-topics-date", data).each(function () {
-    str = str + "<div class='holdrec'>" + $(this).html() + "</div><p>";
-  });
-  $("#recents").append(str);
-});
+// //*************** recent topics code by essi ******************//
+// var topic = "/index.php?act=idx";
+// $.get(topic, function (data) {
+//   var topics = $(".recent-topics-info", data).html();
+//   var str = "";
+//   $(".recent-topics-info, .recent-topics-date", data).each(function () {
+//     str = str + "<div class='holdrec'>" + $(this).html() + "</div><p>";
+//   });
+//   $("#recents").append(str);
+// });
 
 $(function () {
   var replace = $(".topic-desc").text().replace(",", "");
